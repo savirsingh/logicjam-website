@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About LogicJam</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="icon.png">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Lexend', sans-serif;
+        background-color: #141425;
+        color: #ffffff;
+        font-size: 20px;
+        transition: background-color 0.5s ease;
+    }
+    header {
+        background-color: #141425;
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.5s ease;
+    }
+    nav {
+        background-color: #141425;
+        font-size: 24px;
+        padding: 10px 0;
+        text-align: center;
+        transition: background-color 0.5s ease;
+    }
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    a:hover {
+        color: #f3675a;
+    }
+    #icon {
+        display: none;
+    }
+    section {
+        padding: 50px 20px;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #subtext {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #subtext.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #faq {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #faq.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    footer {
+        border-top: #fff solid 1px;
+        background-color: #141425;
+        padding: 20px;
+        transition: background-color 0.5s ease;
+    }
+    footer p {
+        margin: 0;
+        color: #ffffff;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .faq-item {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .faq-question {
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #333;
+        font-size: 20px;
+        color: #fff;
+        border: none;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        transition: background-color 0.3s;
+    }
+    .faq-answer {
+        padding: 10px 20px;
+        background-color: #555;
+        color: #fff;
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    .faq-item.active .faq-answer {
+        display: block;
+        max-height: 200px; /* adjust as needed */
+    }
+	.plus-sign {
+	    float: right;
+	    margin-left: 10px;
+	    font-weight: bold;
+	}
+
+</style>
+</head>
+<body>
+<header>
+    <img src="2024.png">
+</header>
+<nav id="navbar">
+    <a id="icon" href="/"><img style="height:100%;vertical-align: middle;" src="icon.png"></a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+<section>
+    <div class="container">
+        <h2>Challenge Regulations</h2>
+        <p>Here are the regulations for participating in LogicJam:</p>
+        <ul>
+            <li>Participants must be between the ages of 13 and 24 years old.</li>
+            <li>Participants must be enrolled in an accredited school or post-secondary program.</li>
+            <li>Registration opens on April 22, 2024, and closes on July 1, 2024.</li>
+            <li>Acceptances/rejections are sent out on a rolling basis starting in early August 2024.</li>
+            <li>All decisions will be finalized by September 2024.</li>
+            <li>The event will take place from November 22-24, 2024.</li>
+        </ul>
+        <p>Please note that all decisions are final and cannot be appealed. If you are not accepted, don't be disheartened - we strive to keep our acceptance rate below 15% to ensure all our resources are given to the top applicants. Apply next year free of charge!</p>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <img src="logo.png"><br><span style="margin-left: 24px">A math hackathon built in Oakville, Canada.</span><br><br>
+        <div style="padding: 8px">
+        <a style="padding: 14px" href="/privacy">Privacy Policy</a>
+        <a style="padding: 14px" href="/regulations">Challenge Regulations</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const icon = document.getElementById('icon');
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const section1 = document.querySelector('section');
+        const positionFromTop = section1.getBoundingClientRect().top;
+
+        if (positionFromTop <= headerHeight) {
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0px';
+            navbar.style.width = '100%';
+            navbar.style.backgroundColor = '#141425';
+            navbar.style.zIndex = '1000';
+            icon.style.display = 'inline';
+            
+        } else {
+            navbar.style.position = 'static';
+            icon.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>
+

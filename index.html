@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LogicJam - The Best Mathematics Event for Students</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="icon.png">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Lexend', sans-serif;
+        background-color: #141425;
+        color: #ffffff;
+        font-size: 20px;
+        transition: background-color 0.5s ease;
+    }
+    header {
+        background-color: #141425;
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.5s ease;
+    }
+    nav {
+        background-color: #141425;
+        font-size: 24px;
+        padding: 10px 0;
+        text-align: center;
+        transition: background-color 0.5s ease;
+    }
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+    }
+    a {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    a:hover {
+        color: #f3675a;
+    }
+    #icon {
+        display: none;
+    }
+    section {
+        padding: 50px 20px;
+        text-align: center;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #subtext {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #subtext.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    #faq {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #faq.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    footer {
+        border-top: #fff solid 1px;
+        background-color: #141425;
+        padding: 20px;
+        transition: background-color 0.5s ease;
+    }
+    footer p {
+        margin: 0;
+        color: #ffffff;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .faq-item {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    .faq-question {
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #333;
+        font-size: 20px;
+        color: #fff;
+        border: none;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        transition: background-color 0.3s;
+    }
+    .faq-answer {
+        padding: 10px 20px;
+        background-color: #555;
+        color: #fff;
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    .faq-item.active .faq-answer {
+        display: block;
+        max-height: 200px; /* adjust as needed */
+    }
+	.plus-sign {
+	    float: right;
+	    margin-left: 10px;
+	    font-weight: bold;
+	}
+
+	    /* Style for the button link */
+    .push-down-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #007bff;
+        border-radius: 5px;
+        transition: transform 0.2s;
+    }
+
+    /* Style for the button link when active */
+    .push-down-btn:active {
+        transform: translateY(2px);
+    }
+
+    /* Hover effect for the button link */
+    .push-down-btn:hover {
+        background-color: #0056b3;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <img src="2024.png">
+</header>
+<nav id="navbar">
+    <a id="icon" href="/"><img style="height:100%;vertical-align: middle;" src="icon.png"></a>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</nav>
+<section id="section1">
+    <div class="container">
+        <h2>This November, experience LogicJam for yourself.</h2>
+	<a target="_blank" href="https://forms.gle/dGrDTepgV9sSdKRcA" class="push-down-btn">Apply Now</a>
+        <p><small>November 22-24, 2024</small></p>
+        <div id="subtext">
+        <p>A weekend-long hackathon-style event with a focus on mathematics and innovation.</p>
+        </div>
+    </div>
+</section><br><br><br>
+<section>
+<div class="container">
+<h2>Event Format</h2>
+<p>We will have several math competitive and open rounds consisting of hundreds of problems, for hundreds of participants to solve!</p>
+<p>There will be many opportunities to win prizes throughout the weekend.</p>
+</div>
+</section><br><br><br>
+<section id="faq">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+	    <button class="faq-question">What is LogicJam?<span class="plus-sign">+</span></button>
+	    <div class="faq-answer">
+		<p>LogicJam is a weekend-long hackathon-style event focusing on mathematics and innovation. Each year, we plan to accept several hundred applicants to join us for a weekend in late November to solve several mathematics problems.</p>
+	    </div>
+	</div>
+	<div class="faq-item">
+	    <button class="faq-question">Who can participate?<span class="plus-sign">+</span></button>
+	    <div class="faq-answer">
+		<p>Applying to LogicJam is open to <b>all students* aged between 13 and 24 years old</b> interested in mathematics and innovation, regardless of experience level. In the case of in-person opportunities, we do not cover expenses related to travel. In order to participate in our event, you will need to submit an application by July 1, 2024 and wait for acceptance.</p>
+		<p>*You must be enrolled in an accredited elementary/high school or post-secondary program in November 2024.</p>
+	    </div>
+	</div>
+	<div class="faq-item">
+	    <button class="faq-question">How do I register?<span class="plus-sign">+</span></button>
+	    <div class="faq-answer">
+		<p>Registration opens globally on <b>April 22, 2024</b> and will remain open until <b>July 1, 2024</b>. Acceptances/rejections are sent out on a rolling basis, with the <b>first decisions coming out in early August 2024</b>. All decisions will be out by September 2024, and the event is in late November 2024.</p>
+	    </div>
+	</div>
+	<div class="faq-item">
+	    <button class="faq-question">How much does it cost?<span class="plus-sign">+</span></button>
+	    <div class="faq-answer">
+		<p>Both registering and participating (if you get accepted) in LogicJam 2024 will be 100% free. There may be fees related to potential <i>and optional</i> in-person opportunities. Regardless of your income level, as long as you value mathematics and innovation, there's a spot for you here at LogicJam.</p>
+	    </div>
+	</div>
+	<div class="faq-item">
+	    <button class="faq-question">Why should I apply?<span class="plus-sign">+</span></button>
+	    <div class="faq-answer">
+		<p>LogicJam isn't your typical hackathon; it's a one-of-a-kind experience. It's free to attend, won't interfere with your school schedule, and offers the chance to network, win prizes, and tackle exciting math challenges with team members and hosts in a competitive setting!</p>
+	    </div>
+	</div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <img src="logo.png"><br><span style="margin-left: 24px">A math hackathon built in Oakville, Canada.</span><br><br>
+        <div style="padding: 8px">
+        <a style="padding: 14px" href="/privacy">Privacy Policy</a>
+        <a style="padding: 14px" href="/regulations">Challenge Regulations</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const icon = document.getElementById('icon');
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const section1 = document.getElementById('section1');
+        const positionFromTop = section1.getBoundingClientRect().top;
+
+        if (positionFromTop <= headerHeight) {
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0px';
+            navbar.style.width = '100%';
+            navbar.style.backgroundColor = '#141425';
+            navbar.style.zIndex = '1000';
+            icon.style.display = 'inline';
+            
+        } else {
+            navbar.style.position = 'static';
+            icon.style.display = 'none';
+        }
+    });
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+        const section1 = document.getElementById('subtext');
+        const positionFromTop = section1.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (positionFromTop - screenHeight <= 0) {
+            section1.classList.add('visible');
+        }
+    });
+    window.addEventListener('scroll', function() {
+        const section1 = document.getElementById('faq');
+        const positionFromTop = section1.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (positionFromTop - screenHeight <= 0) {
+            section1.classList.add('visible');
+        }
+    });
+</script>
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            faqQuestions.forEach((item) => {
+                item.parentElement.classList.remove('active');
+                item.querySelector('.plus-sign').textContent = '+';
+            });
+
+            if (!isActive) {
+                faqItem.classList.add('active');
+                this.querySelector('.plus-sign').textContent = '-';
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
